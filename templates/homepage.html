@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome!</title>
+
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class ="header-container">
+    <div class = "logo-container">
+        <img src="{{ url_for('static', filename='images/headshot_temp.png') }}" alt="Devlin Irwin Headshot">
+    </div>
+
+    <div class="title-container">
+        <hr>
+        <h1>Devlin A. Irwin</h1>
+        <h3>The Digital Resume and Portfolio</h3>
+        <hr>
+    </div>
+
+    <div class = "logo-container">
+        <img src="{{ url_for('dynamic_logo') }}" alt="Devlin Irwin - Economist, Researcher, Cool Guy">
+    </div>
+</div>
+
+<div class="input-container">
+    <input type="text" id="userCode" placeholder="Enter Code...">
+    <button onclick="submitCode()">Submit</button>
+
+    <p id="responseMessage"></p>
+</div>
+
+<div class="statement-container">
+    <hr>
+    <p>
+        Operating at the intersection of economics and data engineering, my approach to analysis is defined by total ownership of 
+        the data lifecycle. Rather than viewing forecasting as a purely statistical exercise, I treat it as a systems engineering 
+        challenge — building the infrastructure to ingest raw data, architecting the SQL pipelines that control it, and developing the 
+        reproducible models that drive decision-making. Whether projecting complex state revenue streams or simulating labor market 
+        dynamics, I prioritize transparency and scalability, constantly expanding my technical toolkit to modernize how economic 
+        insights are generated and delivered.
+    </p>
+    <br>
+    <hr>
+</div>
+
+<div class="employment-container">
+    <div><h2>Florida Department of Revenue</h2></div>
+    <div><h2>Regional Economic Consulting</h2></div>
+    <div><h2>Peace Corps Gana</h2></div>
+</div>
+
+
+<script>
+    function submitCode() {
+
+        const code = document.getElementById('userCode').value
+        const display = document.getElementById('responseMessage');
+
+        display.innerText = "Code Entered: " + code;
+
+        display.style.color = "green";
+
+    }
+</script>
+
+
+</body>
+</html>
