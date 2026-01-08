@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+
 <title>Welcome!</title>
 
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
@@ -39,7 +42,7 @@
     <p>
         Operating at the intersection of economics and data engineering, my approach to analysis is defined by total ownership of 
         the data lifecycle. Rather than viewing forecasting as a purely statistical exercise, I treat it as a systems engineering 
-        challenge — building the infrastructure to ingest raw data, architecting the SQL pipelines that control it, and developing the 
+        challenge: building the infrastructure to ingest raw data, architecting the SQL pipelines that control it, and developing the 
         reproducible models that drive decision-making. Whether projecting complex state revenue streams or simulating labor market 
         dynamics, I prioritize transparency and scalability, constantly expanding my technical toolkit to modernize how economic 
         insights are generated and delivered.
@@ -51,22 +54,48 @@
 <div class="employment-container">
     <div><h2>Florida Department of Revenue</h2></div>
     <div><h2>Regional Economic Consulting</h2></div>
-    <div><h2>Peace Corps Gana</h2></div>
+    <div class="gallery-card">
+        <h2>Peace Corps Ghana</h2>
+        <p>From June 2018 to March of 2020, I was an Education Volunteer in Peace Corps Ghana. I taught Math and Computers at
+        Adina AME Zion Junior High School to approximately 300 students. In my time there, I started an extracurricular club
+        for students that wanted more class time, funded and painted a world map mural, and worked with the community to 
+        start a poultry farm that would provide the school with additional funding. Unfortunately, my time in the country
+        was cut short by the Pandemic, but I was there long enough to gain a lasting respect for other cultures, and an
+        understanding of all the challenges in developing sustainable change.
+        </p>
+
+        <div class="crop-container" onclick="openModal(); currentSlide(1)">
+            <img src="{{ url_for('static', filename='images/' + photos[0].file) }}" alt="Gallery Cover">
+            <div class="overlay"><span>View Gallery ({{ photos|length }} photos)</span>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                {% for photo in photos %}
+                <div class="mySlides">
+                    <div class="numbertext">{{ loop.index }} / {{ photos|length }}</div>
+                    <img src="{{ url_for('static', filename='images/' + photo.file) }}" style="width:100%">
+
+                    <div class="caption-container">
+                        <h3>{{ photo.title }}</h3>
+                        <p>{{ photo.caption }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    
+    </div>
 </div>
 
 
-<script>
-    function submitCode() {
-
-        const code = document.getElementById('userCode').value
-        const display = document.getElementById('responseMessage');
-
-        display.innerText = "Code Entered: " + code;
-
-        display.style.color = "green";
-
-    }
-</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 
 </body>

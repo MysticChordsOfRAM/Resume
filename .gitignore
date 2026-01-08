@@ -10,3 +10,4 @@ Thumbs.db
 Dockerfile
 docker-compose.yml
 headshot_temp.png
+*.webp

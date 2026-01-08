@@ -9,6 +9,82 @@ import supersecrets as shh
 
 app = Flask(__name__)
 
+pc_photos = [
+    {"file": "last_day.webp",
+     "title": "My Last Day",
+     "caption": (
+        "This was my last day in the community. Some of my older students came out to help me pack "  
+        "and finish up our world map mural. We got it done just in time for me to reach the city before dark."
+    )},
+
+    {"file": "fishing_boat.webp",
+     "title": "Out at Sea",
+     "caption": (
+        "My community was a fishing village on the eastern coast. That introduced its own interesting dynamic to my service. "
+        "For one thing, fishing is profitable. A lot of boys, after turing 15ish, start taking time off school to go fish, then realize "
+        "they don't really need to go back. For another thing, it means the entire community is ruled by the fishing season. When the "
+        "season is on, fishermen from all over the country descend on the town. They bring money, but they also bring a level of chaos and "
+        "unpredictablility. Community censure is one of the strongest detterents they have against crime, but it's not terribly effective on "
+        "people from outside the community."
+    )},
+
+    {"file": "class_time.webp",
+     "title": "Class Time",
+     "caption": (
+       "Not lesson time, but class time. This is Class 2B, between lessons. Class 2 is roughly the equivalent of our 7th grade but I want to "
+       "emphasize rough. Students in this class range from 12 to 21 years old and most of them don't know multiplication or speak english (by "
+       "this point, the official curriculum calls for them to be learning algebra and rhetoric - that's not gonna happen). The real value of their "
+       "education isn't book learning but discipline and citizenship. And you can see that here. Even though it's not lesson time, everyone is seated "
+       "and the goofing off is relatively tame. And don't judge the nappers too harshly - many of them have been up since before dawn doing chores "
+       "for their house, then chores for the school (no janitor, the students clean the campus), and they know the real value of a break." 
+    )},
+
+    {"file": "school_contest.webp",
+     "title": "Competition!",
+     "caption": (
+         "The school held an Academic Decathalon about halfway through my first year. One student from each grade per team, the A team is pictured."
+         "Don't mistake a general lack of academic accomplishment for unintelligence. Delight (front, age 11) and Doe Stephen (back, tan shirt, age 19) "
+         "are both wicked smart, and the B team is no slouch either. These students love a good showdown, and for two hours the entire student body "
+         "crammed around as 6 kids battled for academic superiority. I don't remember who won, but it doesn't matter much to me. "
+    )},
+
+    {"file": "that_bird.webp",
+     "title": "That Bird!",
+     "caption": (
+        "When I was in my first couple months on site we had a really bad overnight storm. The wind and the rain pummeled "
+        "the coast for what must've been hours. At this point, I was still in the habit of waking up extra early and getting to the school well "
+        "ahead of the other teachers, so as I arrived to campus the students were just starting to clean up the fallen branches and detritus that "
+        "had been knocked around by wind. As I wandered around the buildings, making sure they were dry enough for lessons, I found some young kids "
+        "huddled around a bit of chickenwire on the ground. In the chickenwire was this bird! They had captured it and planned to cook it. I was, "
+        "of course, horrified, that someone could find this bird, stunned and weak from the storm, and think to eat it. So I rescued it from the kids "
+        "and tried to release it. But it didn't want to go anywhere. I ended up teaching my morning classes with this dumb bird on my hand. " 
+        "Around lunchtime, I took it for a walk in the marshy area behind the school and it finally honked at me and flew off. My next class "
+        "was so disapointed when I didn't bring the bird to their lesson, that one of them went out and caught me a pigeon! When I told him that I "
+        "didn't want it, they proceeded to kill it and cook it. Lesson Learned."
+     )},
+
+    {"file": "fitness_day.webp",
+     "title": "Fitness Day",
+     "caption": (
+         "Lessons were always getting cancelled for one thing or another. This day, the headmaster decided we would have a \"Fitness Day\" to "
+         "make teach students how to excercise. For me, any activity day is a day for me to bring my camera and get embarrasing candid shots of "
+         "my students, so my complaints were minimal. My students, bless them, always hammed it up for the camera, but Gideon's efforts in this "
+         "shot are a level above. He launched into this pose out of the plank he was supposed to be in without any thought for how he would land. "
+         "Bruises well earned! I only wish I had closed the shutter half a second later to get everyone's reactions."
+     )},
+
+    {"file": "computer_class.webp",
+     "title": "Computer Class",
+     "caption": (
+        "Computer Class was made possible my Mr. Tay, who would bring in his own computer, peripherals, and extension cord to do practicals on. "
+        "The school has been the recipient of donated laptops on at least three occasions, but the salty air and the heat and dust kill them with "
+        "remarkable speed. Mr. Tay keeps this machine clean and maintained on his own, so the kids have something to learn on. This is just one "
+        "example of many where the charity of others fails to make its proper impact due to poor planning. Until the school has an air-conditioned "
+        "and weather sealed room, donated laptops will continue to fail. But it's mcuh easier to get donated laptops than to build such a room in "
+        "in Ghana, so I expect the flow of laptops to continue, and for Mr. Tay to need to fill the gaps with his own efforts."
+    )}
+]
+
 @app.route('/logo.png')
 def dynamic_logo():
     n_points = 15000
@@ -93,7 +169,7 @@ def dynamic_logo():
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 100)
     ax.set_aspect('equal')
-    #ax.axis('off')
+    ax.axis('off')
 
     buf = io.BytesIO()
 
@@ -111,7 +187,7 @@ def dynamic_logo():
 
 @app.route('/')
 def homepage():
-    return render_template('homepage.html')
+    return render_template('homepage.html', photos = pc_photos)
 
 if __name__ == "__main__":
     app.run(host = shh.app_host, port = shh.app_port)
