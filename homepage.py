@@ -32,7 +32,7 @@ pc_photos = [
      "title": "Class Time",
      "caption": (
        "Not lesson time, but class time. This is Class 2B, between lessons. Class 2 is roughly the equivalent of our 7th grade but I want to "
-       "emphasize rough. Students in this class range from 12 to 21 years old and most of them don't know multiplication or speak english (by "
+       "emphasize ~rough~. Students in this class range from 12 to 21 years old and most of them don't know multiplication or speak english (by "
        "this point, the official curriculum calls for them to be learning algebra and rhetoric - that's not gonna happen). The real value of their "
        "education isn't book learning but discipline and citizenship. And you can see that here. Even though it's not lesson time, everyone is seated "
        "and the goofing off is relatively tame. And don't judge the nappers too harshly - many of them have been up since before dawn doing chores "
@@ -45,7 +45,7 @@ pc_photos = [
          "The school held an Academic Decathalon about halfway through my first year. One student from each grade per team, the A team is pictured."
          "Don't mistake a general lack of academic accomplishment for unintelligence. Delight (front, age 11) and Doe Stephen (back, tan shirt, age 19) "
          "are both wicked smart, and the B team is no slouch either. These students love a good showdown, and for two hours the entire student body "
-         "crammed around as 6 kids battled for academic superiority. I don't remember who won, but it doesn't matter much to me. "
+         "crammed around as 6 kids battled for academic superiority. I only wish I could remember who won."
     )},
 
     {"file": "that_bird.webp",
@@ -67,21 +67,21 @@ pc_photos = [
      "title": "Fitness Day",
      "caption": (
          "Lessons were always getting cancelled for one thing or another. This day, the headmaster decided we would have a \"Fitness Day\" to "
-         "make teach students how to excercise. For me, any activity day is a day for me to bring my camera and get embarrasing candid shots of "
-         "my students, so my complaints were minimal. My students, bless them, always hammed it up for the camera, but Gideon's efforts in this "
-         "shot are a level above. He launched into this pose out of the plank he was supposed to be in without any thought for how he would land. "
+         "teach students how to excercise. For me, any activity day is a day for me to bring my camera and get embarrasing candid shots of "
+         "my students, so my complaints were minimal. The kids, bless them, always hammed it up for the camera, but Gideon's efforts in this "
+         "shot are a level above. He launched into this pose out of his plank without any thought for how he would land. "
          "Bruises well earned! I only wish I had closed the shutter half a second later to get everyone's reactions."
      )},
 
     {"file": "computer_class.webp",
      "title": "Computer Class",
      "caption": (
-        "Computer Class was made possible my Mr. Tay, who would bring in his own computer, peripherals, and extension cord to do practicals on. "
-        "The school has been the recipient of donated laptops on at least three occasions, but the salty air and the heat and dust kill them with "
+        "Computer Class was made possible by Mr. Tay, who would bring in his own computer, peripherals, and extension cord for practicals. "
+        "The school has been the recipient of donated laptops on at least three occasions, but the salty air, heat, and dust kill them with "
         "remarkable speed. Mr. Tay keeps this machine clean and maintained on his own, so the kids have something to learn on. This is just one "
         "example of many where the charity of others fails to make its proper impact due to poor planning. Until the school has an air-conditioned "
-        "and weather sealed room, donated laptops will continue to fail. But it's mcuh easier to get donated laptops than to build such a room in "
-        "in Ghana, so I expect the flow of laptops to continue, and for Mr. Tay to need to fill the gaps with his own efforts."
+        "and weather sealed room, donated laptops will continue to fail. But it's much easier to get donated laptops than to build such a room "
+        "so I expect the flow of laptops to continue, and for Mr. Tay to need to fill the gaps with his own efforts."
     )}
 ]
 

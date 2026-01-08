@@ -16,26 +16,26 @@
 <div class ="header-container">
     <div class = "logo-container">
         <img src="{{ url_for('static', filename='images/headshot_temp.png') }}" alt="Devlin Irwin Headshot">
-    </div>
+    </div> <!-- Close logo-container -->
 
     <div class="title-container">
         <hr>
         <h1>Devlin A. Irwin</h1>
         <h3>The Digital Resume and Portfolio</h3>
         <hr>
-    </div>
+    </div> <!-- Close title container -->
 
     <div class = "logo-container">
         <img src="{{ url_for('dynamic_logo') }}" alt="Devlin Irwin - Economist, Researcher, Cool Guy">
-    </div>
-</div>
+    </div> <!-- Close logo-container -->
+</div> <!-- Close header-container -->
 
 <div class="input-container">
     <input type="text" id="userCode" placeholder="Enter Code...">
     <button onclick="submitCode()">Submit</button>
 
     <p id="responseMessage"></p>
-</div>
+</div> <!-- Close Input Container -->
 
 <div class="statement-container">
     <hr>
@@ -49,13 +49,38 @@
     </p>
     <br>
     <hr>
-</div>
+</div> <!-- Close statement-container -->
 
 <div class="employment-container">
-    <div><h2>Florida Department of Revenue</h2></div>
-    <div><h2>Regional Economic Consulting</h2></div>
+    
+    <div class="job-container">
+        <h3>Regional Economic Consulting</h3>
+        <p>
+            I first picked up a project with REC in 2024, when they wanted to use data from IPEDS to model the labor capacity of university 
+            students. I have been on at least one project with them continuously since then. 
+
+        </p>
+    </div>
+
+    <div class="job-container">
+        <h2>Florida Department of Revenue</h2>
+        <p>
+            I was hired by the Department in 2021, and have been happily employed there since. Currently, I hold the title <b>Senior Research 
+            Economist</b>, having quickly worked my way from the entry level position I started in. My duties at the department include:
+            <ul>
+                <li>Forecasting Tax Revenue</li>
+                <li>Scoring Pending Legislation</li>
+                and
+                <li>Producing Webforms and Public Data</li>
+            </ul>
+
+            As part of my duties, I have successfully automated every web form we produce, as well as investigated and validated the data down to 
+            source.
+        </p>
+    </div>
+
     <div class="gallery-card">
-        <h2>Peace Corps Ghana</h2>
+        <h3>Peace Corps Ghana</h3>
         <p>From June 2018 to March of 2020, I was an Education Volunteer in Peace Corps Ghana. I taught Math and Computers at
         Adina AME Zion Junior High School to approximately 300 students. In my time there, I started an extracurricular club
         for students that wanted more class time, funded and painted a world map mural, and worked with the community to 
@@ -66,9 +91,10 @@
 
         <div class="crop-container" onclick="openModal(); currentSlide(1)">
             <img src="{{ url_for('static', filename='images/' + photos[0].file) }}" alt="Gallery Cover">
-            <div class="overlay"><span>View Gallery ({{ photos|length }} photos)</span>
-            </div>
-        </div>
+            <div class="overlay">
+                <span>View Gallery ({{ photos|length }} photos)</span>
+            </div> <!-- Close div overlay -->
+        </div> <!-- Close crop-container -->
 
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -82,21 +108,17 @@
                     <div class="caption-container">
                         <h3>{{ photo.title }}</h3>
                         <p>{{ photo.caption }}</p>
-                    </div>
-                </div>
+                    </div> <!-- Close caption-container -->
+                </div> <!-- Close mySlides -->
                 {% endfor %}
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </div>
-    
-    </div>
-</div>
-
+            </div> <!-- Close modal-content -->
+        </div> <!-- Close myModal -->
+    </div> <!-- Close gallery-container -->
+</div> <!-- Close employment-container -->
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
 </body>
 </html>

@@ -76,16 +76,23 @@ body {
 
 .employment-container {
     display: flex;
-    align-items: center;
+    margin: 0 auto;
+    align-items: flex-start;
     justify-content: center;
     gap: 20px;
+    width: 70%;
+}
+
+.job-container {
+    flex: 1;
+    min-width: 300px;
 }
 
 .gallery-card {
+    flex: 1;
     max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-    font-family: sans-serif;
+    margin: 0;
+    text-align: left;
 }
 
 .crop-container {
@@ -143,6 +150,17 @@ body {
 .caption-container {
     color: white;
     padding: 10px;
+    text-align: left;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
 
 .prev, .next {
